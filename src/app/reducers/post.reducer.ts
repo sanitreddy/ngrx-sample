@@ -17,7 +17,7 @@ const newState = (state: any, newData: any) => {
 
 /// Reducer function
 export function postReducer(state: Post = defaultState, action: Action) {
-  console.log(action.type, state)
+    console.log(action.type, state)
 
 	switch (action.type) {
   		case PostActions.EDIT_TEXT:
