@@ -7,7 +7,8 @@ import { AppComponent } from './app.component';
 import { StoreModule } from '@ngrx/store';
 import { simpleReducer } from './simple.reducer';
 import { postReducer } from './reducers/post.reducer';
-
+import { HttpClientModule } from '@angular/common/http';
+import { SampleService } from './sample.service';
 
 @NgModule({
   declarations: [
@@ -16,10 +17,11 @@ import { postReducer } from './reducers/post.reducer';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     FormsModule,
     StoreModule.forRoot({post: postReducer, message: simpleReducer})
   ],
-  providers: [],
+  providers: [SampleService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,3 +1,4 @@
+<h1>NGRX</h1>
 <div *ngIf="post | async as p">
 
 
@@ -10,7 +11,36 @@
 
   <div>
     <input [(ngModel)]="text">
-    <button (click)="editText()" >Change Title</button>
+    <button (click)="editText()">Change Title</button>
   </div>
 
 </div>
+<br>
+
+<!-- For Dependency Injection -->
+
+<h1>Dependecy Injection</h1>
+<button type="button" name="button" (click)="getInfoFromServiceClass1()">Employee 1</button>
+<ul class="list-group">
+  <li *ngFor="let info1 of infoReceived1" class="list-group-item">{{info1}}</li>
+</ul>
+<pre></pre>
+
+<button type="button" name="button" (click)="getInfoFromServiceClass2()">Employee 2</button>
+<ul class="list-group">
+  <li *ngFor="let info2 of infoReceived2" class="list-group-item">{{info2}}</li>
+</ul>
+<pre></pre>
+
+<button type="button" name="button" (click)="getInfoFromServiceClass3()">Employee 3</button>
+<ul class="list-group">
+  <li *ngFor="let info3 of infoReceived3" class="list-group-item">{{info3}}</li>
+</ul>
+
+
+<!-- For Observables -->
+
+<h1>Observables</h1>
+<ul *ngFor="let employee of employees">
+  <p>{{employee.id}} . {{employee.name}}</p>
+</ul>
